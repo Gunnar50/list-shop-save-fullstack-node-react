@@ -1,0 +1,122 @@
+.location-container {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.location-bar {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  padding: 7px 15px 7px 15px;
+  background-color: var(--color-palette-4);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  box-shadow: 0 0 2px var(--color-palette-3);
+}
+
+.location-view {
+  display: flex;
+  align-items: center;
+  .location-view-caption {
+    font-size: 0.95em;
+    font-weight: 400;
+    margin-right: 5px;
+    display: inline-block;
+  }
+  .location-view-long-place {
+    display: none;
+  }
+  .location-view-short-place {
+    display: inline;
+  }
+  p {
+    text-wrap: nowrap;
+    font-size: 0.9em;
+    margin-right: 10px;
+  }
+  span {
+    font-weight: 600;
+  }
+  button {
+    font-size: 0.75em;
+  }
+}
+
+.location-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  > * {
+    margin: 5px;
+  }
+  > input {
+    width: 200px;
+  }
+}
+
+.location-form-error {
+  width: 330px;
+  text-align: left;
+  font-weight: 500;
+  color: var(--color-palette-2);
+}
+
+.gps-button-container-loading {
+  animation: loader-spin 1s linear infinite;
+}
+
+.gps-button-container {
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes loader-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.location-results {
+  cursor: pointer;
+  width: 100%;
+  background-color: var(--color-table-row-2);
+  border-radius: 0 0 0 10px;
+  .location-result-item:last-child {
+    border-radius: 0 0 0 10px;
+  }
+  .location-result-item {
+    padding: 10px;
+    text-wrap: nowrap;
+  }
+  .location-result-item-selected {
+    background-color: var(--color-table-row-1);
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .location-bar {
+    width: fit-content;
+    padding: 7px 15px 7px 15px;
+    border-radius: 0 0 0 20px;
+  }
+  .location-view {
+    .location-view-long-place {
+      display: inline;
+    }
+    .location-view-short-place {
+      display: none;
+    }
+  }
+}
