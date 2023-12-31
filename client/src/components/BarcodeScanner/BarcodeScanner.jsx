@@ -5,21 +5,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { apiURL } from "../../config";
 import { selectProductData } from "../../redux/dataSlice";
 import { setContent } from "../../redux/messageSlice";
-import { findFirstProductBySku } from "../../utils/findProductBySku";
 import "./BarcodeScanner.scss";
 
 const DRAW_BOXES = true;
 
-const BarcodeScanner = ({
-	cameraActive,
-	setCameraActive,
-	handleSearch,
-	setSearch,
-}) => {
+const BarcodeScanner = ({ cameraActive, setCameraActive, handleSearch }) => {
 	const dispatch = useDispatch();
-	const [barcode, setBarcode] = useState(null);
-	const [product, setProduct] = useState(null);
-	const searchResult = useSelector(selectProductData);
 	const isInitialMount = useRef(true);
 
 	const getSearchTermBySku = async (sku) => {
