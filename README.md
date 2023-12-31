@@ -6,7 +6,7 @@ This full-stack Node & JavaScript application is an educational tool developed a
 
 ### 🏠 [Demo Link](https://listshopsave.uk/)
 
-<!-- ![alt text](client/Logos/) -->
+![alt text](client/Logos/readme.PNG)
 
 ## ✨ Features
 
