@@ -4,7 +4,7 @@
 
 This full-stack Node & JavaScript application is an educational tool developed as part of The Jump full-time development course. It enables users to save money by comparing prices across UK supermarkets. The application serves as a practical resource for making cost-effective shopping decisions. More information about the course is available at [thejump.tech](https://www.thejump.tech)
 
-### 🏠 [Demo Link](https://listshopsave.uk/)
+<!-- ### 🏠 [Demo Link](https://listshopsave.uk/) -->
 
 ![alt text](client/Logos/readme.PNG)
 
